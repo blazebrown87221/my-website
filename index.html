@@ -8,6 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            text-align: center;
         }
         h1 {
             color: #3498db;
@@ -15,12 +16,21 @@
         p {
             color: #555;
         }
+        #profilePic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: opacity 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body>
 
     <h1>About Me</h1>
     
+    <img id="profilePic" src="your_profile_picture_url.jpg" alt="Profile Picture">
+
     <p id="aboutText">Hello, I'm [Your Name]. Welcome to my About Me page!</p>
 
     <button onclick="changeText()">Change Text</button>
@@ -29,6 +39,14 @@
         function changeText() {
             var aboutText = document.getElementById("aboutText");
             aboutText.innerHTML = "I'm a [Your Occupation/Interest]. Thanks for visiting!";
+            
+            var profilePic = document.getElementById("profilePic");
+            profilePic.style.opacity = 0;
+            
+            setTimeout(function() {
+                profilePic.src = "new_profile_picture_url.jpg"; // Replace with your new profile picture URL
+                profilePic.style.opacity = 1;
+            }, 500); // 500 milliseconds delay for the fade effect
         }
     </script>
 
