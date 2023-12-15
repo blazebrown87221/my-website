@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #3498db;
+        }
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>About Me</h1>
+    
+    <p id="aboutText">Hello, I'm [Your Name]. Welcome to my About Me page!</p>
+
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            var aboutText = document.getElementById("aboutText");
+            aboutText.innerHTML = "I'm a [Your Occupation/Interest]. Thanks for visiting!";
+        }
+    </script>
+
+</body>
+</html>
