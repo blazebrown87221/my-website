@@ -29,25 +29,12 @@
 
     <h1>About Me</h1>
     
-    <img id="profilePic" src="your_profile_picture_url.jpg" alt="Profile Picture">
+    <img id="profilePic" src="https://avatars.cloudflare.steamstatic.com/9bc525b16ca8a504d8f3152d75c3f2b45b0fe17c_full.jpg" alt="Profile Picture">
 
-    <p id="aboutText">Hello, I'm [Your Name]. Welcome to my About Me page!</p>
+    <p id="aboutText"></p>
+    <h2>hello im blazebrown8722 i like to code html css php and more</h2>
 
-    <button onclick="changeText()">Change Text</button>
 
-    <script>
-        function changeText() {
-            var aboutText = document.getElementById("aboutText");
-            aboutText.innerHTML = "I'm a [Your Occupation/Interest]. Thanks for visiting!";
-            
-            var profilePic = document.getElementById("profilePic");
-            profilePic.style.opacity = 0;
-            
-            setTimeout(function() {
-                profilePic.src = "new_profile_picture_url.jpg"; // Replace with your new profile picture URL
-                profilePic.style.opacity = 1;
-            }, 500); // 500 milliseconds delay for the fade effect
-        }
     </script>
 
 </body>
