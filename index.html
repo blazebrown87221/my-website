@@ -8,6 +8,10 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row-reverse; /* Change to row if you want the text on the left */
             text-align: center;
         }
         h1 {
@@ -23,18 +27,36 @@
             object-fit: cover;
             transition: opacity 0.5s ease-in-out;
         }
+        #content {
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>About Me</h1>
+    <div id="content">
+        <h1>About Me</h1>
+        
+        <p id="aboutText">Hello, I'm [Your Name]. Welcome to my About Me page!</p>
+
+     
+    </div>
     
     <img id="profilePic" src="https://avatars.cloudflare.steamstatic.com/9bc525b16ca8a504d8f3152d75c3f2b45b0fe17c_full.jpg" alt="Profile Picture">
 
-    <p id="aboutText"></p>
-    <h2>hello im blazebrown8722 i like to code html css php and more</h2>
-
-
+    <script>
+        function changeText() {
+            var aboutText = document.getElementById("aboutText");
+            aboutText.innerHTML = "hello im blazebrown8722 and i like css html php and more!";
+            
+            var profilePic = document.getElementById("profilePic");
+            profilePic.style.opacity = 0;
+            
+            setTimeout(function() {
+                profilePic.src = "https://avatars.cloudflare.steamstatic.com/9bc525b16ca8a504d8f3152d75c3f2b45b0fe17c_full.jpg"; // Replace with your new profile picture URL
+                profilePic.style.opacity = 1;
+            }, 500); // 500 milliseconds delay for the fade effect
+        }
     </script>
 
 </body>
